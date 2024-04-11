@@ -1,7 +1,6 @@
 "use client";
 //import NewNote from "./NewNote";
 import { user, useState, useEffect } from "react";
-
 import{getAuth} from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
