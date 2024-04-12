@@ -1,9 +1,9 @@
 "use client";
-//import NewNote from "./NewNote";
+import NewNote from "../NewNote";
 import { user, useState, useEffect } from "react";
-
-import{getAuth, signOut, onAuthStateChanged} from "firebase/auth";
+import {getAuth, signOut, onAuthStateChanged}from "firebase/auth";
 import { useRouter } from "next/navigation";
+import Header from "../Header";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import app from "../../../config";
 
@@ -28,27 +28,41 @@ function Dashboard (){
 
 }, [auth, router]);
 
+
 const handleLogout  = async ()=>{
     try{
         await  signOut(auth);
         router.push("/"); // Ridirect to the login page
     }catch (error){
-        console.error("Error signing out : ", error.message)
+       // console.error("Error signing out : ", error.message)
     }
 };
+
+
+ 
+
+
 return(
-    <div className="flex flex-col items-center justify-center h-screen">
-     <div className=" p-8 rounded-lg shadow-md">
-        <h1 className=" text-3xl font-bold mb-4">
-            wellcome to the,{user ? user.displayName : "Guest" }!</h1>
-<button onClick={handleLogout} className=" bg-read-500 hover:bg- bg-green-500 text-white font-bold py-2 px-4 rounded-lg">
-LogOut
-</button>
+    
+     <div className="">
+        <h1 className=" text-3xl font-bold"> {user ? user.displayName : "Guest" }!</h1>
+        <NewNote/>
+        
+         <div className=" md:ml-[1200px] pb-3.5 ">
+       
+        <button  onClick={handleLogout} className=" bg-green-500 text-white font-bold   py-2 px-4 rounded-lg">
+        LogOut 
+        </button>
+        </div>
+         
+        
+
+
      </div>
 
 
 
-    </div>
+
 );
 }
 

@@ -36,7 +36,7 @@ import Header from "././Header";
   return (
     
 
-    <div className=' bg-teal-800 h-svh'>
+    <div className='  bg-teal-800 h-svh'>
     <Header/>
        <h1 className='text-5xl p-5 pl-10 font-extrabold'>NOTES</h1>
        <div className='create-note md:pl-8 md:w-[700px] text-center  justify-items-center '>
@@ -44,7 +44,7 @@ import Header from "././Header";
             <input type='text' placeholder='Title'  name='title' onChange={handleChange} value={State.title} required className=' border-2 pl-3 rounded-xl border-blue-300 p-2 '/>
 
             <textarea name='note' cols='30' rows='10' placeholder='Description' onChange={handleChange} value={State.note} required  className='border-2 rounded-xl mt-2 border-blue-200  '></textarea>
-            <button type='submit' className=' hover:bg-red-800 px-5 py-3  text-white rounded-xl bg-orange-700 mt-4 '>Add Note</button>
+            <button type='submit' className=' hover:bg-red-800 px-5 py-3  text-white rounded-xl bg-orange-700 mt-4 '>Save Note</button>
         </form>
        </div>
 

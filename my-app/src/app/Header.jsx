@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
 //import Signin from "./Signin";
 import Dashboard from './Dashboard/page';
+import NewNote from "./NewNote";
 
 
 const HomePage = () => {
@@ -18,10 +19,12 @@ const HomePage = () => {
     if(currentHour < 12) setGreetText("Good Morning!")
     else if(currentHour < 18) setGreetText("Good Afternoon!");
     else setGreetText("Good Evening!");
-  }, [])
+  },[]);
 
+  
+ 
   return (
-    <div className='app flex bg-orange-400 sticky top-0 '>
+    <div className='app flex bg-orange-700 sticky top-0 '>
       <Image src="/color.png" width="120"  height="100" className='pl-6 '/>
       <div className='app-main'>
         <header className='header w-100 flex align-center'>
@@ -34,14 +37,13 @@ const HomePage = () => {
               </div>
               <div className='font-bold pt-10 pl-2 '>
                 <span className='text-uppercase '>{date}</span>
-                <Dashboard/>
+                
+                
               </div>
             </div>
           </div>
         </header>
-        <div className='notes-wrapper py-4 px-4'>
         
-        </div>
       </div>
     </div>
   )

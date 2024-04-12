@@ -1,6 +1,6 @@
 "use client";
-//import NewNote from "./NewNote";
-import { user, useState, useEffect } from "react";
+import NewNote from "./NewNote";
+import { user , useState , useEffect } from "react";
 import{getAuth} from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -48,7 +48,7 @@ const Home = ()=>{
           {user?(<Dashboard/>):(
   
               //user is not loaged in button
-      <button onClick={signInWithGoogle}className="bg-blue hover:bg-800 text-white font-bold py-4 rounded">
+      <button onClick={signInWithGoogle}className="bg-gray-400 p-5 hover:bg-read-400 text-black font-bold py-4 rounded">
             signIn With Google
           </button>
   
