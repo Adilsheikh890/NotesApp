@@ -58,7 +58,7 @@ import Header from "././Header";
                         <button className='delete-note absolute right-2 top-0 pt-5 text-red-800' onClick={()=>handleDelete(note.id)}>< MdDelete size={25}/></button>
                   
                     
-          <h3 className='text-black font-bold underline'>{note.title}</h3>
+          <h3 className='text-black font-bold underline '>{note.title}</h3>
           <p className='text-black font-medium'>{note.note}</p>
           </div>
           

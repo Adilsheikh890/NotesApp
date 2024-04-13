@@ -24,18 +24,18 @@ const HomePage = () => {
   
  
   return (
-    <div className='app flex bg-orange-700 sticky top-0 '>
-      <Image src="/color.png" width="120"  height="100" className='pl-6 '/>
+    <div className='app flex  sticky top-0 '>
+      <Image src="/4.png" alt='logo' width="140"  height="110" className='pl-6 '/>
       <div className='app-main'>
-        <header className='header w-100 flex align-center'>
-          <div className='container w-100 md:pl-[800px] '>
+        <header className='header w-100 flex align-center '>
+          <div className='container w-100 md:pl-[700px]  '>
             <div className='header-content flex align-center justify-between text-white'>
-              <div className=' font-bold pt-10 '>
+              <div className=' font-bold pt-7  '>
               
                 <h3 className=' '>{greetText}</h3>
                 
               </div>
-              <div className='font-bold pt-10 pl-2 '>
+              <div className='font-bold pt-7 pl-2  '>
                 <span className='text-uppercase '>{date}</span>
                 
                 

@@ -44,20 +44,21 @@ const handleLogout  = async ()=>{
 
 return(
     
-     <div className="">
-        <h1 className=" text-3xl font-bold"> {user ? user.displayName : "Guest" }!</h1>
-        <NewNote/>
-        
-         <div className=" md:ml-[1200px] pb-3.5 ">
+     <div className="  ">
+        <h1 className=" text-3xl font-bold md:pl-3 pt-1"> {user ? user.displayName : "Guest" }!</h1>
        
-        <button  onClick={handleLogout} className=" bg-green-500 text-white font-bold   py-2 px-4 rounded-lg">
+        
+         <div className=" md:pl-[1200px] pl-[250px] absolute top-4">
+       
+        <button  onClick={handleLogout} className=" bg-green-500 text-white font-bold  py-2 px-4 rounded-lg">
         LogOut 
         </button>
+        
         </div>
          
         
-
-
+        
+        <NewNote/>
      </div>
 
 
