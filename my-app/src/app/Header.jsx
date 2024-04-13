@@ -2,9 +2,7 @@
 
 import React, {useState, useEffect} from 'react';
 import Image from 'next/image';
-//import Signin from "./Signin";
-import Dashboard from './Dashboard/page';
-import NewNote from "./NewNote";
+
 
 
 const HomePage = () => {
